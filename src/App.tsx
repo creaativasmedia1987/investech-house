@@ -7,6 +7,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 import InvestechElite_DirectorEdition from "./pages/InvestechElite_DirectorEdition";
+import MetricasMensais from "./pages/MetricasMensais";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,11 @@ const App = () => (
             <Route path="/" element={
               <ProtectedRoute>
                 <InvestechElite_DirectorEdition />
+              </ProtectedRoute>
+            } />
+            <Route path="/metricas" element={
+              <ProtectedRoute>
+                <MetricasMensais />
               </ProtectedRoute>
             } />
             <Route path="*" element={<NotFound />} />
