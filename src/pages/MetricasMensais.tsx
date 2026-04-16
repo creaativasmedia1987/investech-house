@@ -53,6 +53,14 @@ export default function MetricasMensais() {
               <option>Fevereiro</option>
               <option>Março</option>
               <option>Abril</option>
+              <option>Maio</option>
+              <option>Junho</option>
+              <option>Julho</option>
+              <option>Agosto</option>
+              <option>Setembro</option>
+              <option>Outubro</option>
+              <option>Novembro</option>
+              <option>Dezembro</option>
             </select>
             <ChevronDown className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" size={14} />
           </div>
