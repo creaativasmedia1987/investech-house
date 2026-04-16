@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { Trophy, Zap, Plus, X, Swords, Flame, Settings, Trash2, Edit3, Lock, Volume2, DollarSign, GitCompare, FileText, Printer, ArrowUpRight, ArrowDownRight, LogOut, Users, User } from 'lucide-react';
+import { Trophy, Zap, Plus, X, Swords, Flame, Settings, Trash2, Edit3, Lock, Volume2, DollarSign, GitCompare, FileText, Printer, ArrowUpRight, ArrowDownRight, LogOut, Users, User, BarChart3 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, LabelList, PieChart, Pie } from 'recharts';
 import confetti from 'canvas-confetti';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 
@@ -328,6 +329,9 @@ const InvestechElite_DirectorEdition = () => {
               VGV USADOS {mesSelecionado}: R$ {(vgvUsados[mesSelecionado] || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
             </span>
           </button>
+          <Link to="/metricas" className="bg-white/10 hover:bg-[#c5a059] hover:text-black border border-white/10 p-4 rounded-2xl transition-all flex items-center gap-2">
+            <BarChart3 size={18} /><span className="text-[10px] font-black uppercase hidden sm:block">MÉTRICAS</span>
+          </Link>
           <button onClick={() => setIsCompareOpen(true)} className="bg-white/5 hover:bg-[#c5a059] hover:text-black border border-white/10 p-4 rounded-2xl transition-all flex items-center gap-2">
             <GitCompare size={20} /><span className="text-[10px] font-black uppercase">Comparativo</span>
           </button>
